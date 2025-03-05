@@ -15,7 +15,7 @@ function ViewFlipbook() {
 
     const fetchFlipbook = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/flipbooks/flipbooks/${id}`);
+            const response = await axios.get(`https://twod-flipbook.onrender.com/flipbooks/flipbooks/${id}`);
             setFlipbook(response.data);
             setLoading(false);
         } catch (err) {
