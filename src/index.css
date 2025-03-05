@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+        .marquee-container {
+            position: fixed;
+            width: 100vw;
+            height: 150px; /* Fixed height */
+            top: 40%;
+            transform: rotate(355deg);
+            overflow: hidden;
+            white-space: nowrap;
+            z-index:0;
+            opacity: 0.5;
+            pointer-events: none; /* So it doesn’t block interactions */
+        }
+
+        .marquee-content {
+            display: inline-block;
+            font-size: 5rem;
+            font-weight: bold;
+            z-index: -1;
+            color: #000000; /* Adjust text color */
+            animation: marquee 8s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+        }
