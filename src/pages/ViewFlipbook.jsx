@@ -28,7 +28,7 @@ function ViewFlipbook() {
     if (error) return <div className="text-center text-red-500">{error}</div>;
     if (!flipbook) return <div className="text-center text-white">Flipbook not found</div>;
 
-    const pdfUrl = `http://localhost:5000/uploads/${flipbook.filename}`;
+    const pdfUrl = `https://twod-flipbook.onrender.com/uploads/${flipbook.filename}`;
 
     return (
         <div className="min-h-screen bg-gray-900">
