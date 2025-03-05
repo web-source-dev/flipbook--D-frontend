@@ -21,7 +21,7 @@ function CreateFlipbook() {
         formData.append('pdf', file);
 
         try {
-            await axios.post('http://localhost:5000/upload', formData, {
+            await axios.post(`https://twod-flipbook.onrender.com/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
