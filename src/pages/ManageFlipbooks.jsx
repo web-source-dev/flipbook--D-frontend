@@ -13,7 +13,7 @@ function ManageFlipbooks() {
 
     const fetchFlipbooks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/flipbooks');
+            const response = await axios.get('https://twod-flipbook.onrender.com/flipbooks');
             setFlipbooks(response.data);
             setLoading(false);
         } catch (err) {
@@ -25,7 +25,7 @@ function ManageFlipbooks() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this flipbook?')) {
             try {
-                await axios.delete(`http://localhost:5000/flipbooks/${id}`);
+                await axios.delete(`https://twod-flipbook.onrender.com/flipbooks/${id}`);
                 fetchFlipbooks();
             } catch (err) {
                 setError('Failed to delete flipbook');
