@@ -16,7 +16,7 @@ function EditFlipbook() {
 
     const fetchFlipbook = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/flipbooks/${id}`);
+            const response = await axios.get(`https://twod-flipbook.onrender.com/flipbooks/${id}`);
             const { name, description } = response.data;
             setName(name);
             setDescription(description);
@@ -33,7 +33,7 @@ function EditFlipbook() {
         setError(null);
 
         try {
-            await axios.put(`http://localhost:5000/flipbooks/${id}`, {
+            await axios.put(`https://twod-flipbook.onrender.com/flipbooks/${id}`, {
                 name,
                 description
             });
